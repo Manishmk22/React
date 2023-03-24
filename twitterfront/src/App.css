@@ -1,0 +1,274 @@
+.navigation{
+  background-color:white;
+  margin: 0;
+  width:100%;
+  overflow:hidden;
+  border:5px solid lightgrey;
+  text-align:center;
+  display:flex;
+  flex-direction:row;
+  justify-content: space-between;  
+  
+
+}
+body{
+  background-color: lightgrey;
+}
+
+
+.tweetButton{
+  margin-right:15px;
+  text-align:center;
+  color:white;
+  background-color:#00b8e6;
+  font-family:Arial;
+  font-weight:bold;
+  float:right;
+  height:40px;
+  width:70px;
+  font-size:15px;
+  border: 1px #00b8e6;
+  text-decoration:none;
+  border-radius:35px;
+  position: relative;
+  right:2%;
+  top:-47px;
+  
+  
+  
+}
+nav a{
+  display:block;
+  margin: 0 0;
+  color:grey;
+  font-family:Arial;
+  padding-left:50px;
+  text-decoration:none;
+  padding-right:50px;
+  padding-top:7px;
+  padding-bottom:12px;
+}
+nav a:hover{
+  background-color: lightblue;
+}
+nav a.active{
+  background-color: lightblue;
+}
+.navElements p{
+  display:block;
+  margin: 0 0;
+  color:grey;
+  font-family:Arial;
+  padding-left:50px;
+  text-decoration:none;
+ padding-top:5px;
+ 
+  
+}
+/* .navElements p:hover{
+  background-color: lightblue;
+} */
+
+.navElements{
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+
+}
+.App-body{
+  display:flex;
+  flex-direction:row;
+}
+.con1{
+  display:flex;
+  align-items:center;
+  flex-direction:column;
+  float:left;
+  height:350px;
+  
+  
+  
+}
+.sub1{
+  border: 5px solid lightgrey;
+  border-bottom:0px;
+  border-top:0px;
+  height:130px;
+  width:400px;
+  background-color:black;
+  text-align:center;
+  
+}
+.sub1 h1{
+  color:white;
+  padding:30px;
+  text-shadow:2px .5px grey;
+}
+.sub2{
+  border: 5px solid lightgrey;
+  border-top:0px;
+  height:600px;
+  width:400px;
+  background-color:white;
+  text-align:center;
+  
+}
+.sub2 h4{
+  line-height:0.5px;
+  text-decoration:underline;
+  
+}
+.sub2 p{
+  padding-bottom:40px;
+  color:grey;
+}
+.table0{
+  width:50%;
+}
+.table0 h4{
+  padding:0px;
+}
+.table1{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:-40px;
+ 
+  
+}
+.table1 th{
+  padding:20px;
+  font-family:Arial;
+  color:grey;
+}
+.table1 td{
+  color:#00b8e6;
+  font-weight:bold;
+}
+.table1 td:hover{
+  transform:translate(5px,5px);
+  color:purple;
+}
+#image0{
+  height:70px;
+  width:80px;
+  border-radius:50%;
+  border:1px solid black;
+  margin-right:-50px;
+  transform:translateY(-70%);
+}
+.con2{
+ 
+  align-items:center;
+  background-color:white;
+  float:right;
+  height:90vh;
+  width:68vw;
+  z-index: 10;
+  
+  margin-top:-40px;
+}
+#rem{
+  color:grey;
+}
+
+
+
+#image1{
+  height:50px;
+  width:60px;
+  border-radius:50%;
+  border:1px solid black;
+  margin:5px;
+  
+}
+
+.modal{
+  width:500px;
+  background-color: white;
+  position:absolute;
+ left:30%;
+ top:30%;
+ border:2px solid gray;
+ display:flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+.modal-header{
+  width:96%;
+  padding:10px;
+  
+  display:flex;
+  justify-content: space-between;
+  border-bottom: 1px solid gray;
+}
+.modal-body{
+  padding:10px;
+
+}
+.tweetpost{
+  width:400px;
+  height:100px;
+  
+  
+}
+.post{
+  
+  
+  text-align:center;
+  color:white;
+  background-color:#00b8e6; 
+  height:30px;
+  width:70px;
+  margin-bottom: 20px;
+  border-radius:35px;
+}
+.notify{
+ 
+ background-color: white;
+ height:600px;
+ width:69%;
+ float:right;
+ text-align: center;
+
+}
+.messages{
+  background-color: white;
+  height:600px;
+  width:69%;
+  float:right;
+  text-align: center;
+ 
+}
+.icons{
+  size: 18px;
+  margin-top:5px;
+}
+.EditClose{
+ display:flex;
+ flex-direction: row;;
+  
+}
+.Edit{
+  padding:5px;
+}
+.Close{
+  padding:5px;
+}
+.TweetLists{
+  display:flex;
+  flex-direction:row ;
+  padding:10px;
+  justify-content: space-between;
+  border-bottom: 2px solid lightgray;
+}
+.TweetContent{
+  display:flex;
+  flex-direction: row;
+  justify-content: left;
+}
+
+.TweetMessage{
+  padding:10px;
+
+}

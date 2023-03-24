@@ -1,0 +1,19 @@
+nav{
+  background-color: antiquewhite;
+  padding:15px 30px;
+  text-align: left;
+}
+nav a{
+  margin-right: 20px;
+}
+nav a.active{
+  color:blueviolet;
+  text-decoration: none;
+  font-weight: bold;
+}
+body{
+  text-align: center;
+}
+ul li{
+  text-align: left;
+}
