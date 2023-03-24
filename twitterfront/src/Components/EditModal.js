@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 const EditModal = ({tweet,index,setEdit, updateTask, tweetObj}) => {
 
-    const[edittweets,setEditTweets]=useState('');
+    const[edittweets,setEditTweets]=useState(tweet);
     console.log(`Index: ${index}`);
     
    const handleChange = (e) => {

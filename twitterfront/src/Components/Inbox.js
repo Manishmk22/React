@@ -1,15 +1,29 @@
 import React from 'react'
 import ProfileBar from './ProfileBar'
-import { useState,useContext } from 'react'
+import { useState,useContext,useEffect } from 'react'
 import { Context } from './Navbar'
-const Inbox = () => {
-    const{message}=useContext(Context);
+const Inbox = ({message}) => {
+    // const{message}=useContext(Context);
+    
+
+  
+
+
   return (
     <>
     <div><ProfileBar></ProfileBar></div>
     <div className="messages">
     <h1>Inbox</h1>
-    <h2>{message}</h2>
+    {message.map((data)=>{
+       return <div className="message">
+        
+        <h4>{data}</h4>
+        
+       </div>
+    }
+    
+    )}
+    {/* <h2>{message}</h2> */}
     
     </div>
     </>

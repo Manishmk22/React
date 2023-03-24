@@ -272,3 +272,12 @@ nav a.active{
   padding:10px;
 
 }
+.message{
+  width:100%;
+  min-height:70px;
+  background-color: lightblue;
+  display:flex;
+  justify-content:center;
+  text-align: center;
+  border:2px solid lightgray;
+}

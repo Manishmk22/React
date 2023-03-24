@@ -1,11 +1,20 @@
 import React from 'react'
 import ProfileBar from './ProfileBar'
-import { useState,useContext } from 'react'
+import { useState,useContext,useEffect } from 'react'
 import { Context } from './Navbar'
-const Moments = () => {
+import { useNavigate  } from 'react-router-dom'
+const Moments = ({message,setMessage}) => {
   const[text,setText]=useState("");
 
-const{setMessage}=useContext(Context);
+// const{setMessage}=useContext(Context);
+const navigate=useNavigate();
+const passMessage=()=>{
+  let temp=[...message];
+  temp.push(text);
+  setMessage(temp);
+  navigate('/inbox')
+
+}
 
   return (
     <>
@@ -13,9 +22,9 @@ const{setMessage}=useContext(Context);
     <div className="messages">
     <h1>Messages</h1>
     <textarea type="text" className="messageInput" placeholder="Write a message" onChange={(e)=>setText(e.target.value)}/>
-    <div><button  onClick={()=>setMessage(text)}>Click</button></div>                                           
+    <div><button  onClick={passMessage}>Click</button></div>                                           
     </div>
-    </>
+    </> 
   )
 }
 

@@ -14,8 +14,9 @@ const TweetModal = ({setShow,saveTweet,i}) => {
    const handleClick = (e) => {
     e.preventDefault();
        let tweetObj={};
+       
        tweetObj["Tweet"]=tweets;
-       tweetObj["id"]=i++;
+       
        saveTweet(tweetObj); 
    }
   return (

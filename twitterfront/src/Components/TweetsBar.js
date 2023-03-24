@@ -8,6 +8,7 @@ var i=2;
   const [show,setShow]=useState(false )
   const [tweetList, setTweetList] = useState([{id:0,Tweet:"Hii"},{id:1,Tweet:"Hello"}])
   const [edit,setEdit] = useState(false);
+  const [currentEdit,setCurrentEdit] = useState(-1);
 
   const showModal =()=>{
       setShow(true);
@@ -22,6 +23,7 @@ var i=2;
     temp.push(tweetObj);
     setTweetList(temp);
     setShow(false);
+    console.log(`TweetList${tweetList}`);
     
 }
 const handleDelete=(index)=>{
@@ -38,6 +40,7 @@ const updateTask = (obj,index) => {
   console.log(index)
   let tempList = [...tweetList]
   tempList[index] = obj;
+  console.log(obj);
   setTweetList(tempList)
 }
 
@@ -69,18 +72,19 @@ const updateTask = (obj,index) => {
           </div>
           </div>
           <div className='EditClose'>
-            <FaEdit className='Edit' onClick = {() => setEdit(true)} />
-
-
+            <FaEdit className='Edit' onClick = {() => {
+              setCurrentEdit(index)
+              setEdit(true)
+              }} />
             <FaWindowClose className='Close' onClick={()=>{
             handleDelete(index)
           }} /></div>
-          {edit && <EditModal  setEdit={setEdit} updateTask = {updateTask} tweetObj = {obj} index={index} tweet={obj.Tweet}/>}
+         
      </div>
      
       }
       )} 
-      
+       {edit && <EditModal  setEdit={setEdit} updateTask = {updateTask} tweetObj = {tweetList[currentEdit]} index={currentEdit} tweet={tweetList[currentEdit].Tweet}/>}
       </div>
      
     </div>

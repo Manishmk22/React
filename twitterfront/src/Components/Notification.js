@@ -7,6 +7,7 @@ const transEnglish = {text:"No Notifications has been received!"};
 const transFrench = {text:"Aucune notification n'a été reçue !"};
 const transGerman = {text:"Es wurden keine Benachrichtigungen erhalten!"};
 
+
 i18next.use(initReactI18next).init({
   resources : { 
     en : {translation : transEnglish},
@@ -27,13 +28,14 @@ const Notification = () => {
     <div><ProfileBar></ProfileBar></div>
     <div className="notify">
     <h1>Notification</h1>
-    <h2>{t("text")} </h2>
-    Change Language
+    
      <select onChange={changeLang}>
          <option value="en">English</option>
          <option value="fr">French</option>
          <option value="gr">German</option>
          </select>
+    <h2>{t("text")} </h2>
+    
     
     </div>
     </>
