@@ -4,7 +4,7 @@ import { useState,useContext,useEffect } from 'react'
 import { Context } from './Navbar'
 const Inbox = ({message}) => {
     // const{message}=useContext(Context);
-    
+    console.log(message)
 
   
 

@@ -1,6 +1,16 @@
 import React from 'react'
+import { useState ,useEffect} from 'react'
 
 const ProfileBar = () => {
+  const[profile,setProfile] = useState("")
+  const[user,setUser] = useState("");
+
+  useEffect(() =>{
+    setProfile("Remy");
+    setUser("@remy");
+
+
+  })
   return (
     <div>
       <div className="con1" >
@@ -8,14 +18,14 @@ const ProfileBar = () => {
       
     <h1>RATATOUILLE</h1>
       </div>
-     <div className="sub2"> 
+     <div className="sub2">  
        <table className= "table0">
         <tbody>
          <tr><td><img src="https://static.vecteezy.com/system/resources/previews/003/513/755/original/mouse-cartoon-cute-rat-illustration-free-vector.jpg " id="image0" alt='img' />
          </td>
        <td>    
-       <h4>Remy</h4>
-       <p>@remy</p>
+       <h4>{profile}</h4>
+       <p>{user}</p>
          </td>
          </tr>
          </tbody>

@@ -4,7 +4,11 @@ import TweetModal from './TweetModal'
 import {FaEdit,FaWindowClose} from "react-icons/fa";
 import EditModal from './EditModal';
 const TweetsBar = () => {
-var i=2;
+
+  const[profile,setProfile] = useState("")
+  const[user,setUser] = useState("");
+  const[date,setDate]=useState("");
+
   const [show,setShow]=useState(false )
   const [tweetList, setTweetList] = useState([{id:0,Tweet:"Hii"},{id:1,Tweet:"Hello"}])
   const [edit,setEdit] = useState(false);
@@ -15,7 +19,9 @@ var i=2;
   }
   
    useEffect(()=>{
-   console.log(tweetList)
+  setProfile("Remy");
+  setUser("@remy");
+  setDate("Mar 2023");
   },[tweetList])
 
   const saveTweet = (tweetObj) => {
@@ -52,7 +58,7 @@ const updateTask = (obj,index) => {
     
      </div>
     <div>
-    {show && <TweetModal setShow={setShow} saveTweet={saveTweet} i={i} />}
+    {show && <TweetModal setShow={setShow} saveTweet={saveTweet}  />}
     </div>
    
        <div className="con2">
@@ -67,7 +73,7 @@ const updateTask = (obj,index) => {
           <div className='TweetContent'>
         <div className='TweetImage'><img src="https://static.vecteezy.com/system/resources/previews/003/513/755/original/mouse-cartoon-cute-rat-illustration-free-vector.jpg " alt='img' id="image1" />
         </div>
-        <div className='TweetMessage'><strong>Remy</strong><span  id="rem">  @remy Mar 2023<br/></span>
+        <div className='TweetMessage'><strong>{profile}</strong><span  id="rem"> {user} {date}<br/></span>
           <p>{obj.Tweet}</p>
           </div>
           </div>

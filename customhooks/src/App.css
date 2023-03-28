@@ -1,0 +1,84 @@
+li{
+  list-style: none;
+}
+body{
+  
+  background-color: rgb(91, 72, 132);
+}
+h1{
+  text-align: center;
+}
+.text-center{
+  width:100%;
+  background-color: aquamarine;
+  
+  display: flex;
+  justify-content:center ;
+  text-align: center;
+  
+}
+.input-form{
+  width:600px;
+  height:600px;
+  background-color: goldenrod;
+  align-items: center;
+  margin: auto;
+  overflow: scroll;
+  border-radius: 10px;
+  display:flex;
+  flex-direction: column;
+}
+.form-control{
+  width:400px;
+  height:30px;
+  margin-top:30px;
+ 
+  
+}
+.btn-primary{
+  height:35px;
+}
+.taskRow{
+  height: 35px;
+  width:450px;
+  border-bottom:3px solid ghostwhite;
+  margin:10px 20px 5px 20px;
+  background-color: darkolivegreen;
+  align-items: center;
+  padding-top:2px;
+  padding-right:20px;
+  border-radius: 10px;
+  display: flex;
+ justify-content: space-between; 
+ 
+  
+}
+.close{
+ 
+  color:white;
+  height:20px;
+  width:20px;
+font-weight: bold;
+  background-color: red;
+ border-radius: 50%;
+  cursor:pointer;
+  margin:auto;
+  display:flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+.close:hover{
+  background-color: white;
+  color: red;
+}
+.Tasks{
+  color:white;
+  margin-left: 15px;
+}
+.checkBox{
+  margin-left: 15px;
+  margin-top: 5px;
+  cursor:pointer;
+  height:18px;
+  width:20px;
+}
